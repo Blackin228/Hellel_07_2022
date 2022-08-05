@@ -12,9 +12,9 @@ print("Check: ")
 print("var_1 == var_2 == var_3 :", var_1 == var_2 == var_3)
 print("var_1 is var_2 is var_3 :", var_1 is var_2 is var_3)
 # зміна на неоднакові id:
-var_1 = float(var_1)
-var_2 = int(var_2)
-var_3 = float(var_3)
+var_1 = str(var_1)
+var_2 = str(var_2)
+var_3 = str(var_3)
 # перевірка:
 print("Checking changed variables: ")
 print("var_1 == var_2 == var_3 :", var_1 == var_2 == var_3)
@@ -40,4 +40,3 @@ print("Checking changed variables: ")
 print("var_1 == var_2 :", var_1 == var_2)
 print("var_1 is var_2 :", var_1 is var_2)
 print("*" * 50)
-
