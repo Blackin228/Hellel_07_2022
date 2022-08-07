@@ -1,0 +1,1 @@
+print input<<<>>>!First word: TNIRP, Second word: Tupni ?<<<>>>!First word: TNIRP, Second word: Tupni ?<<<>>>!First word: TNIRP, Second_word: Tupni ?
