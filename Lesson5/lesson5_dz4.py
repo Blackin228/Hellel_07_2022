@@ -1,5 +1,4 @@
-case = True
-while case is True:
+while True:
     name = input("Введіть ваше ім'я: ").title()
     age = input("Введіть ваш вік: ")
     if not age.isdigit() or int(age) <= 0:
@@ -14,5 +13,5 @@ while case is True:
         print(f"{name}, ви брешете - в наш час стільки не живуть...")
     choice = input("Хочете вийти? (Д/Y): ").lower()
     if choice == "y" or choice == "д":
-        case = False
+        break
     print("-" * 50)
