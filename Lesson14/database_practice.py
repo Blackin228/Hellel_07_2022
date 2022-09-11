@@ -88,7 +88,7 @@ result = get_unique_customers_by_sql()
 
 def calculate_the_amount_of_orders_by_python() -> None:
     '''
-    функція для підрахунку загального прибутку
+    функція для підрахунку загального прибутку за допомогою python
     :return: None
     '''
     query_sql = '''
@@ -106,6 +106,10 @@ calculate_the_amount_of_orders_by_python()
 
 
 def calculate_the_amount_of_orders_by_sql() -> None:
+    '''
+    функція для підрахунку загального прибутку за допомогою sql
+    :return: None
+    '''
     query_sql = '''
         SELECT SUM(UnitPrice * Quantity)
           FROM invoice_items
