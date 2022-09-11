@@ -102,7 +102,7 @@ def calculate_the_amount_of_orders_by_python() -> None:
     print(f"загальний прибуток розрахований за допомогою python дорівнює {sum}")
 
 
-calculate_the_amount_of_orders_by_python()
+#calculate_the_amount_of_orders_by_python()
 
 
 def calculate_the_amount_of_orders_by_sql() -> None:
@@ -119,4 +119,46 @@ def calculate_the_amount_of_orders_by_sql() -> None:
         print("Загальний прибуток розрахований за допомогою sql дорівнює", *sum)
 
 
-calculate_the_amount_of_orders_by_sql()
+#calculate_the_amount_of_orders_by_sql()
+
+
+def count_repeat_name_by_python() -> None:
+    '''
+    функція повертає список імен з кількістю їх повторень в базі данних (python)
+    :return: None
+    '''
+    dict_name = {}
+    query_sql = '''
+         SELECT FirstName
+           FROM customers
+     '''
+    names = list(execute_query(query_sql))
+    for name in names:
+        if name in dict_name:
+            dict_name[name] += 1
+        else:
+            dict_name[name] = 1
+
+    for item in dict_name:
+        print(*item,  dict_name[item])
+
+
+#count_repeat_name_by_python()
+
+
+def count_repeat_name_by_sql() -> None:
+    '''
+    функція повертає список імен з кількістю їх повторень в базі данних (sql)
+    :return: None
+    '''
+    query_sql = '''
+             SELECT FirstName, COUNT(FirstName)
+               FROM customers
+               GROUP BY FirstName;
+         '''
+    names = list(execute_query(query_sql))
+    for name in names:
+        print(*name)
+
+
+count_repeat_name_by_sql()
