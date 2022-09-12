@@ -57,4 +57,3 @@ print(person_3.surname)
 print(person_3.age)
 print(person_3.profession)
 print(person_3.sex)
-
