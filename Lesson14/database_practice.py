@@ -143,7 +143,7 @@ def count_repeat_name_by_python() -> None:
         print(*item,  dict_name[item])
 
 
-#count_repeat_name_by_python()
+count_repeat_name_by_python()
 
 
 def count_repeat_name_by_sql() -> None:
@@ -161,4 +161,4 @@ def count_repeat_name_by_sql() -> None:
         print(*name)
 
 
-count_repeat_name_by_sql()
+# count_repeat_name_by_sql()
